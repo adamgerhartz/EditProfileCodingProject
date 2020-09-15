@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Edit Profile Coding Project</string>
+    <string name="edit_profile">Edit Profile</string>
+    
+    <string-array name="textual_profile_information">
+        <item>Name</item>
+        <item>Phone</item>
+        <item>Email</item>
+        <item>Tell us about yourself</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+    </string-array>
+</resources>

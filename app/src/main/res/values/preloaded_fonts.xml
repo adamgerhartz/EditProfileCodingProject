@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/noto_sans</item>
+        <item>@font/noto_serif</item>
+        <item>@font/pt_sans</item>
+        <item>@font/pt_sans_caption</item>
+        <item>@font/roboto</item>
+        <item>@font/source_sans_pro</item>
+        <item>@font/source_sans_pro_semibold</item>
+        <item>@font/ubuntu</item>
+    </array>
+</resources>

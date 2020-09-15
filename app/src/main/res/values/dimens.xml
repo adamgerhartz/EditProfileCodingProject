@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_forty">150dp</dimen>
+    <dimen name="grid_fifty">90dp</dimen>
+    <dimen name="grid_two">16dp</dimen>
+    <dimen name="grid_one">8dp</dimen>
+    <dimen name="bodyText">15dp</dimen>
+    <dimen name="grid_four">32dp</dimen>
+</resources>
