@@ -1,0 +1,22 @@
+[
+  {
+    "name": "photo",
+    "description": "https://raw.githubusercontent.com/adamgerhartz/images/master/headshot.png"
+  },
+  {
+    "name": "Name",
+    "description": "Adam Gerhartz"
+  },
+  {
+    "name": "Phone",
+    "description": "(929) 345-9243"
+  },
+  {
+    "name": "Email",
+    "description": "adamrussellgerhartz@gmail.com"
+  },
+  {
+    "name": "tell us about yourself",
+    "description": "My name is Adam Gerhartz ..."
+  }
+]
