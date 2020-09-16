@@ -1,8 +1,6 @@
 package com.example.editprofilecodingproject
 
-import android.graphics.drawable.Drawable
-import android.util.Log
-import com.example.editprofilecodingproject.models.ProfileInfo
+import com.example.editprofilecodingproject.data.model.ProfileInfo
 
 /**
  * Hardcoded data source. Normally one will use retrofit2 to get data from a saved location on the internet
@@ -13,20 +11,20 @@ class DataSource {
             val list = ArrayList<ProfileInfo>()
             list.add(
                 ProfileInfo(
+                    "Profile Picture",
+                    "https://raw.githubusercontent.com/adamgerhartz/images/master/headshot.png"
+                )
+            )
+            list.add(
+                ProfileInfo(
                     "Name",
                     "Adam Gerhartz"
                 )
             )
             list.add(
-                    ProfileInfo(
-                            "Name",
-                            "Adam Gerhartz"
-                    )
-            )
-            list.add(
                 ProfileInfo(
-                        "Phone",
-                        "(929) 345-9243"
+                    "Phone",
+                    "(929) 345-9243"
                 )
             )
             list.add(

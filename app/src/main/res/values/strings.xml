@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Edit Profile Coding Project</string>
     <string name="edit_profile">Edit Profile</string>
-    
+    <string name="name">Name</string>
+    <string name="name_value">Adam Gerhartz</string>
+
     <string-array name="textual_profile_information">
         <item>Name</item>
         <item>Phone</item>

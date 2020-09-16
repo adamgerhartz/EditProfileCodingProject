@@ -1,3 +1,2 @@
-include ':profile'
 include ':app'
 rootProject.name = "EditProfileCodingProject"
