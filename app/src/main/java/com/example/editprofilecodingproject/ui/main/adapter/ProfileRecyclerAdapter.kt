@@ -107,31 +107,69 @@ import kotlinx.android.synthetic.main.layout_profileinfo_list_item.view.*
 class MainAdapter(
     private val profileData: ArrayList<ProfileInfo>
 ) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
+    private var mItemViewType: Int = 0
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(profileInfo: ProfileInfo) {
-            itemView.name.text = profileInfo.name
-            itemView.description.text = profileInfo.description
-            Glide.with(itemView.profile_picture.context)
-                .load(profileInfo.description)
-                .into(itemView.profile_picture)
+            if (itemViewType == 1) {
+                itemView.name.text = profileInfo.name
+                itemView.description.text = profileInfo.description
+            } else {
+                Glide.with(itemView.profile_picture.context)
+                    .load(profileInfo.description)
+                    .into(itemView.profile_picture)
+            }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        DataViewHolder(
-            LayoutInflater.from(parent.context).inflate(
-                R.layout.layout_profileinfo_list_item, parent,
-                false
-            )
-        )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : MainAdapter.DataViewHolder {
+        when (mItemViewType) {
+            1 -> {
+                return DataViewHolder(
+                    LayoutInflater.from(parent.context).inflate(
+                        R.layout.layout_profileinfo_list_item, parent,
+                        false
+                    )
+                )
+            }
+            else -> {
+                return DataViewHolder(
+                    LayoutInflater.from(parent.context).inflate(
+                        R.layout.layout_profile_image, parent,
+                        false
+                    )
+                )
+            }
+        }
+    }
 
     override fun getItemCount(): Int = profileData.size
 
-    override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
+    override fun onBindViewHolder(holder: MainAdapter.DataViewHolder, position: Int) =
         holder.bind(profileData[position])
+
+    //override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+//        when (holder.itemViewType) {
+//            1 -> {
+//                (holder as ProfileInfoViewHolder).bind(items.get(position))
+//            }
+//            else -> {
+//                (holder as PhotoViewHolder).bind(items.get(position))
+//            }
+//        }
+//    }
 
     fun addData(list: List<ProfileInfo>) {
         profileData.addAll(list)
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        if (position > 0) {
+            mItemViewType = 1
+            return 1
+        } else {
+            mItemViewType = 0
+            return 0
+        }
     }
 }

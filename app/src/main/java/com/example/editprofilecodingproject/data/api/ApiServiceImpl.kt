@@ -8,7 +8,7 @@ import io.reactivex.Single
 class ApiServiceImpl : ApiService {
 
     override fun getProfileData(): Single<List<ProfileInfo>> {
-        return Rx2AndroidNetworking.get("https://raw.githubusercontent.com/adamgerhartz/EditProfileCodingProject/master/app/src/main/res/values/data.json")
+        return Rx2AndroidNetworking.get("https://raw.githubusercontent.com/adamgerhartz/EditProfileCodingProject/master/data.json")
             .build()
             .getObjectListSingle(ProfileInfo::class.java)
     }

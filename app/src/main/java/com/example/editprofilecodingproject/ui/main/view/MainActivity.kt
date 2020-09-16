@@ -3,20 +3,19 @@ package com.example.editprofilecodingproject.ui.main.view
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.editprofilecodingproject.DataSource
 import com.example.editprofilecodingproject.R
-import com.example.editprofilecodingproject.TopSpacingItemDecoration
+import com.example.editprofilecodingproject.ui.main.view.decor.TopSpacingItemDecoration
 import com.example.editprofilecodingproject.data.api.ApiHelper
 import com.example.editprofilecodingproject.data.api.ApiServiceImpl
 import com.example.editprofilecodingproject.data.model.ProfileInfo
 import com.example.editprofilecodingproject.ui.base.ViewModelFactory
 import com.example.editprofilecodingproject.ui.main.adapter.MainAdapter
+import com.example.editprofilecodingproject.ui.main.view.decor.CustomDividerItemDecoration
 //import com.example.editprofilecodingproject.ui.main.adapter.ProfileRecyclerAdapter
 import com.example.editprofilecodingproject.ui.main.viewmodel.MainViewModel
 import com.example.editprofilecodingproject.utils.Status
@@ -72,10 +71,14 @@ class MainActivity : AppCompatActivity() {
         recycler_view.layoutManager = LinearLayoutManager(this)
         adapter = MainAdapter(arrayListOf<ProfileInfo>())
         recycler_view.addItemDecoration(
-            DividerItemDecoration(
+            CustomDividerItemDecoration(
                 recycler_view.context,
-                (recycler_view.layoutManager as LinearLayoutManager).orientation
+                (recycler_view.layoutManager as LinearLayoutManager).orientation,
+                false
             )
+        )
+        recycler_view.addItemDecoration(
+            TopSpacingItemDecoration(30)
         )
         recycler_view.adapter = adapter
     }
