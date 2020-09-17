@@ -9,4 +9,8 @@
 
     </include>
 
+    <include layout="@layout/update_button">
+
+    </include>
+
 </FrameLayout>

@@ -3,6 +3,7 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="name">Name</string>
     <string name="name_value">Adam Gerhartz</string>
+    <string name="update">Update</string>
 
     <string-array name="textual_profile_information">
         <item>Name</item>

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -42,11 +43,15 @@ class EditAboutMeFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         view.findViewById<View>(R.id.back_arrow).setOnClickListener(this)
+        view.findViewById<Button>(R.id.update_button).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.back_arrow -> requireActivity().onBackPressed()
+            R.id.update_button -> {
+                requireActivity().onBackPressed()
+            }
         }
     }
 
