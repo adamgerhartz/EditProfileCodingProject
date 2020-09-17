@@ -1,6 +1,7 @@
 package com.example.editprofilecodingproject.ui.main.view.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.editprofilecodingproject.R
 import com.example.editprofilecodingproject.data.api.ApiHelper
@@ -29,6 +32,7 @@ class MainFragment : Fragment() {
 
     private lateinit var mainViewModel: MainViewModel
     private lateinit var adapter: MainAdapter
+    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,10 +46,15 @@ class MainFragment : Fragment() {
         setupUI()
         setupViewModel()
         setupObserver()
+
+        // we're all set up and initialized
+        // now to wait for events to start rolling in
+        checkForClickEvents()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
     }
 
     private fun setupUI() {
@@ -94,6 +103,14 @@ class MainFragment : Fragment() {
     private fun renderList(profileData: List<ProfileInfo>) {
         adapter.addData(profileData)
         adapter.notifyDataSetChanged()
+    }
+
+    private fun checkForClickEvents() {
+        adapter.onItemClick = {
+            when (it.name) {
+                "Name" -> navController.navigate(R.id.action_mainFragment_to_editNameFragment)
+            }
+        }
     }
 
 }

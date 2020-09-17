@@ -23,6 +23,7 @@ class MainAdapter(
         private val profileData: ArrayList<ProfileInfo>
 ) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
     private var mItemViewType: Int = 0
+    var onItemClick: ((ProfileInfo) -> Unit)? = null
     private lateinit var cardView: CardView
 
     inner class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -49,8 +50,6 @@ class MainAdapter(
             } else {
                 event.invoke(adapterPosition, getItemViewType())
             }
-
-//
         }
         return this
     }
@@ -62,7 +61,7 @@ class MainAdapter(
                 val view = inflater.inflate(R.layout.layout_profileinfo_list_item, parent, false)
                 return DataViewHolder(view).listen { pos, type ->
                     val item = profileData.get(pos)
-                    Log.i("TAPPED", item.description)
+                    onItemClick?.invoke(item)
                 }
             }
             else -> {
@@ -71,7 +70,7 @@ class MainAdapter(
                 cardView = DataViewHolder(view).getCardView()!!
                 DataViewHolder(cardView).listen { pos, type ->
                     val item = profileData.get(pos)
-                    Log.i("TAPPED", item.description)
+                    onItemClick?.invoke(item)
                 }
                 return DataViewHolder(view)
             }
