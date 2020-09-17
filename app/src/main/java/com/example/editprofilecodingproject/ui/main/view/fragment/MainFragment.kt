@@ -107,8 +107,12 @@ class MainFragment : Fragment() {
 
     private fun checkForClickEvents() {
         adapter.onItemClick = {
-            when (it.name) {
-                "Name" -> navController.navigate(R.id.action_mainFragment_to_editNameFragment)
+            when (it.id) {
+                1 -> navController.navigate(R.id.action_mainFragment_to_editPhotoFragment)
+                2 -> navController.navigate(R.id.action_mainFragment_to_editNameFragment)
+                3 -> navController.navigate(R.id.action_mainFragment_to_editPhoneNumberFragment)
+                4 -> navController.navigate(R.id.action_mainFragment_to_editEmailAddressFragment)
+                5 -> navController.navigate(R.id.action_mainFragment_to_editAboutMeFragment)
             }
         }
     }

@@ -17,6 +17,7 @@ import com.example.editprofilecodingproject.R
 import com.example.editprofilecodingproject.data.model.ProfileInfo
 import kotlinx.android.synthetic.main.layout_profile_image.view.*
 import kotlinx.android.synthetic.main.layout_profileinfo_list_item.view.*
+import kotlin.math.absoluteValue
 
 
 class MainAdapter(

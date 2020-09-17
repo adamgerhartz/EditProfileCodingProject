@@ -17,6 +17,8 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
-
+    <style name="Theme.MyFancyTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:homeAsUpIndicator">@drawable/back_button_image</item>
+    </style>
 
 </resources>

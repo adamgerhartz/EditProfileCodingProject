@@ -10,31 +10,31 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.editprofilecodingproject.R
-import com.example.editprofilecodingproject.ui.main.viewmodel.EditNameViewModel
+import com.example.editprofilecodingproject.ui.main.viewmodel.EditEmailAddressViewModel
 import kotlinx.android.synthetic.main.custom_toolbar.view.*
 
-class EditNameFragment : Fragment(), View.OnClickListener {
+class EditEmailAddressFragment : Fragment(), View.OnClickListener {
 
     private lateinit var navController: NavController
 
     companion object {
-        fun newInstance() = EditNameFragment()
+        fun newInstance() = EditEmailAddressFragment()
     }
 
-    private lateinit var viewModel: EditNameViewModel
+    private lateinit var viewModel: EditEmailAddressViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.edit_name_fragment, container, false)
+        val view = inflater.inflate(R.layout.edit_email_address_fragment, container, false)
         (activity as AppCompatActivity).setSupportActionBar(view.my_custom_toolbar)
         return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(EditNameViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(EditEmailAddressViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

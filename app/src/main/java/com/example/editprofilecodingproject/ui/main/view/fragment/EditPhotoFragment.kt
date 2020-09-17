@@ -1,47 +1,54 @@
 package com.example.editprofilecodingproject.ui.main.view.fragment
 
-import androidx.lifecycle.ViewModelProvider
+import android.graphics.Color
+import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.graphics.drawable.DrawableCompat
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.editprofilecodingproject.R
-import com.example.editprofilecodingproject.ui.main.viewmodel.EditNameViewModel
+import com.example.editprofilecodingproject.ui.main.viewmodel.EditPhotoViewModel
 import kotlinx.android.synthetic.main.custom_toolbar.view.*
+import kotlinx.android.synthetic.main.edit_photo_fragment.view.*
 
-class EditNameFragment : Fragment(), View.OnClickListener {
+
+class EditPhotoFragment : Fragment(), View.OnClickListener {
 
     private lateinit var navController: NavController
 
     companion object {
-        fun newInstance() = EditNameFragment()
+        fun newInstance() = EditPhotoFragment()
     }
 
-    private lateinit var viewModel: EditNameViewModel
+    private lateinit var viewModel: EditPhotoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.edit_name_fragment, container, false)
+        val view = inflater.inflate(R.layout.edit_photo_fragment, container, false)
         (activity as AppCompatActivity).setSupportActionBar(view.my_custom_toolbar)
         return view
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(EditNameViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         view.findViewById<View>(R.id.back_arrow).setOnClickListener(this)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(EditPhotoViewModel::class.java)
+
     }
 
     override fun onClick(v: View?) {

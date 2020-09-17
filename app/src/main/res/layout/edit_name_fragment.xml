@@ -5,9 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.view.fragment.EditNameFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+    <include layout="@layout/custom_toolbar">
+
+    </include>
 
 </FrameLayout>
