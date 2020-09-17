@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.editprofilecodingproject.ui.main.view.fragment.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_editNameFragment"
+            app:destination="@id/editNameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editNameFragment"
+        android:name="com.example.editprofilecodingproject.ui.main.view.fragment.EditNameFragment"
+        android:label="edit_name_fragment"
+        tools:layout="@layout/edit_name_fragment" />
+</navigation>

@@ -122,8 +122,8 @@ public class CustomDividerItemDecoration extends RecyclerView.ItemDecoration {
         final int left;
         final int right;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && parent.getClipToPadding()) {
-            left = 48;/*parent.getPaddingLeft();*/
-            right = parent.getWidth() - 48/*parent.getPaddingRight()*/;
+            left = 60;/*parent.getPaddingLeft();*/
+            right = parent.getWidth() - 64/*parent.getPaddingRight()*/;
             canvas.clipRect(left, parent.getPaddingTop(), right,
                     parent.getHeight() - parent.getPaddingBottom());
         } else {

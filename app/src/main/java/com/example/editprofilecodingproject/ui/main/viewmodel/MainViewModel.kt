@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.editprofilecodingproject.data.model.ProfileInfo
 import com.example.editprofilecodingproject.data.repository.MainRepository
+import com.example.editprofilecodingproject.ui.main.adapter.MainAdapter
 import com.example.editprofilecodingproject.utils.Resource
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
