@@ -19,6 +19,8 @@ import com.example.editprofilecodingproject.R
 import com.example.editprofilecodingproject.ui.main.viewmodel.EditPhotoViewModel
 import kotlinx.android.synthetic.main.custom_toolbar.view.*
 import kotlinx.android.synthetic.main.edit_photo_fragment.view.*
+import kotlinx.android.synthetic.main.update_button.*
+import kotlinx.android.synthetic.main.update_button.view.*
 
 
 class EditPhotoFragment : Fragment(), View.OnClickListener {
@@ -43,8 +45,9 @@ class EditPhotoFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<View>(R.id.back_arrow).setOnClickListener(this)
-        view.findViewById<Button>(R.id.update_button).setOnClickListener(this)
+        view.back_arrow!!.setOnClickListener(this)
+        view.update_button!!.setOnClickListener(this)
+        update_button!!.isAllCaps = false
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
