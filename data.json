@@ -1,27 +1,9 @@
-[
-  {
-    "id": 1,
-    "name": "photo",
-    "description": "https://raw.githubusercontent.com/adamgerhartz/images/master/headshot.png"
-  },
-  {
-    "id": 2,
-    "name": "Name",
-    "description": "Adam Gerhartz"
-  },
-  {
-    "id": 3,
-    "name": "Phone",
-    "description": "(929) 345-9243"
-  },
-  {
-    "id": 4,
-    "name": "Email",
-    "description": "adamrussellgerhartz@gmail.com"
-  },
-  {
-    "id": 5,
-    "name": "Tell us about yourself",
-    "description": "My name is Adam Gerhartz ..."
-  }
-]
+{
+  "id": 1,
+  "image_uri": "https://raw.githubusercontent.com/adamgerhartz/images/master/headshot.png",
+  "first_nm": "Adam",
+  "last_nm": "Gerhartz",
+  "phone": "(929) 345-9243",
+  "email": "adamrussellgerhartz@gmail.com",
+  "about_me": "My name is Adam Gerhartz ..."
+}
