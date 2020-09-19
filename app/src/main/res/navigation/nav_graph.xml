@@ -8,52 +8,54 @@
         android:id="@+id/mainFragment"
         android:name="com.example.editprofilecodingproject.ui.main.view.fragment.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" >
+        tools:layout="@layout/main_fragment">
+
+        <argument
+            android:name="recipient1"
+            android:defaultValue="None" />
+        <argument
+            android:name="recipient2"
+            android:defaultValue="None" />
 
         <action
             android:id="@+id/action_mainFragment_to_editNameFragment"
             app:destination="@id/editNameFragment"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/fade_out"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
-        />
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
 
         <action
             android:id="@+id/action_mainFragment_to_editPhotoFragment"
             app:destination="@id/editPhotoFragment"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/fade_out"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
-        />
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
 
         <action
             android:id="@+id/action_mainFragment_to_editPhoneNumberFragment"
             app:destination="@id/editPhoneNumberFragment"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/fade_out"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
-        />
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
 
         <action
             android:id="@+id/action_mainFragment_to_editEmailAddressFragment"
             app:destination="@id/editEmailAddressFragment"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/fade_out"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
-        />
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
 
         <action
             android:id="@+id/action_mainFragment_to_editAboutMeFragment"
             app:destination="@id/editAboutMeFragment"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/fade_out"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
-        />
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
 
     </fragment>
 
@@ -70,6 +72,14 @@
         <argument
             android:name="recipient2"
             android:defaultValue="None" />
+
+        <action
+            android:id="@+id/action_editNameFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"/>
 
     </fragment>
 

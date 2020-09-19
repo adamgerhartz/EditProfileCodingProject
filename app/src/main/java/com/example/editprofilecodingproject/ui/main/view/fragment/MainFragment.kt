@@ -22,8 +22,10 @@ import com.example.editprofilecodingproject.databinding.MainFragmentBinding
 import com.example.editprofilecodingproject.ui.base.ViewModelFactory
 import com.example.editprofilecodingproject.ui.main.viewmodel.MainViewModel
 import com.example.editprofilecodingproject.utils.Status
+import kotlinx.android.synthetic.main.edit_name_fragment.*
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.main_fragment.view.*
+import org.kodein.di.Copy
 
 class MainFragment : Fragment(), View.OnClickListener {
 
@@ -34,12 +36,23 @@ class MainFragment : Fragment(), View.OnClickListener {
     private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: MainFragmentBinding
     private lateinit var navController: NavController
+    var recipient1: String? = null
+    var recipient2: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        recipient1 = requireArguments().getString("recipient1").toString()
+        recipient2 = requireArguments().getString("recipient2").toString()
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.main_fragment, container, false)
+        binding.fullName.value1 = recipient1.toString()
+        binding.fullName.value2 = recipient2.toString()
         return binding.getRoot()
     }
 
@@ -50,7 +63,6 @@ class MainFragment : Fragment(), View.OnClickListener {
         setupViewModel()
         setupObserver()
 
-        Log.i("WE GET THIS FAR", "YES")
 
         // we're all set up and initialized
         // now to wait for events to start rolling in
@@ -64,6 +76,9 @@ class MainFragment : Fragment(), View.OnClickListener {
         view.findViewById<View>(phone_number.id).setOnClickListener(this)
         view.findViewById<View>(email_address.id).setOnClickListener(this)
         view.findViewById<View>(about_me.id).setOnClickListener(this)
+
+
+
     }
 
 //    private fun setupUI() {
@@ -89,13 +104,16 @@ class MainFragment : Fragment(), View.OnClickListener {
         ).get(MainViewModel::class.java)
         binding.mainViewModel = mainViewModel
         binding.lifecycleOwner = this
+
+
+
+
     }
 
     private fun setupObserver() {
         mainViewModel.getProfileData().observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Status.SUCCESS -> {
-                    Log.i("PLEASE WORK", mainViewModel.getProfileData().value.toString())
                     // Render data before setting to visible
                     progressBar.visibility = View.GONE
                     edit_profile_views.visibility = View.VISIBLE

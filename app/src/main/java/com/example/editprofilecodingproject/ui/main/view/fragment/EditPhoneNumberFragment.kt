@@ -53,6 +53,7 @@ class EditPhoneNumberFragment : Fragment(), View.OnClickListener {
         when (v!!.id) {
             R.id.back_arrow -> requireActivity().onBackPressed()
             R.id.update_button -> {
+
                 requireActivity().onBackPressed()
             }
         }
