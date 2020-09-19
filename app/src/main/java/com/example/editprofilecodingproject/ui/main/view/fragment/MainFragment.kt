@@ -23,6 +23,7 @@ import com.example.editprofilecodingproject.ui.base.ViewModelFactory
 import com.example.editprofilecodingproject.ui.main.viewmodel.MainViewModel
 import com.example.editprofilecodingproject.utils.Status
 import kotlinx.android.synthetic.main.edit_name_fragment.*
+import kotlinx.android.synthetic.main.layout_profile_image.view.*
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.main_fragment.view.*
 import org.kodein.di.Copy
@@ -58,14 +59,10 @@ class MainFragment : Fragment(), View.OnClickListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        //setupUI()
 
         setupViewModel()
         setupObserver()
 
-
-        // we're all set up and initialized
-        // now to wait for events to start rolling in
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -81,21 +78,7 @@ class MainFragment : Fragment(), View.OnClickListener {
 
     }
 
-//    private fun setupUI() {
-//        recycler_view.layoutManager = LinearLayoutManager(activity)
-//        adapter = MainAdapter(arrayListOf<ProfileInfo>())
-//        recycler_view.addItemDecoration(
-//            CustomDividerItemDecoration(
-//                recycler_view.context,
-//                (recycler_view.layoutManager as LinearLayoutManager).orientation,
-//                false
-//            )
-//        )
-//        recycler_view.addItemDecoration(
-//            TopSpacingItemDecoration(30)
-//        )
-//        recycler_view.adapter = adapter
-//    }
+
 
     private fun setupViewModel() {
         mainViewModel = ViewModelProvider(

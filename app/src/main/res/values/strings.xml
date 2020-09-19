@@ -8,6 +8,10 @@
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="whats_your_name">What\'s your name?</string>
+    <string name="what_s_your_phone_number">What\'s your phone number?</string>
+    <string name="upload_a_photo_of_yourself">Upload a photo of yourself:</string>
+    <string name="what_s_your_email">What\'s your email?</string>
+    <string name="what_type_of_passenger_are_you">What type of passenger are you?</string>
 
     <string-array name="textual_profile_information">
         <item>Name</item>

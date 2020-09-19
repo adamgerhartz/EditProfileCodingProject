@@ -32,7 +32,6 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe({ data ->
-                        Log.i("YES", data.toString())
                         user.postValue(Resource.success(data))
                     }, { throwable ->
                         user.postValue(Resource.error("Something went wrong", null))
@@ -40,8 +39,6 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
             )
         }).start()
     }
-
-
 
     override fun onCleared() {
         super.onCleared()
