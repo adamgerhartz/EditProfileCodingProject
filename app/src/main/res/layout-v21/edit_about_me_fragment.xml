@@ -3,18 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.view.fragment.EditAboutMeFragment">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.view.fragment.EditEmailAddressFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="100dp"
-        android:layout_marginHorizontal="48dp"
+        android:layout_marginHorizontal="32dp"
         android:gravity="center">
 
         <TextView
-            android:id="@+id/edit_profile"
+            android:id="@+id/about_me"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
@@ -23,7 +24,64 @@
             android:textColor="@color/black"
             android:textSize="26sp"
             android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="260dp"
+                android:layout_weight="1"
+                android:outlineAmbientShadowColor="@color/offwhite"
+                android:outlineSpotShadowColor="@color/offwhite"
+                android:outlineProvider="none"
+                android:background="@android:color/transparent"
+                tools:targetApi="p">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/offwhite"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/edit_text_border">
+
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:elevation="0dp"
+                        android:background="@null"
+                        android:id="@+id/edit_text_first_name"
+                        android:paddingStart="8dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto"
+                        android:lines="8"
+                        android:gravity="left"
+                        android:hint="@string/hint_text"
+                        tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
     </LinearLayout>
+
 
     <include layout="@layout/custom_toolbar">
 

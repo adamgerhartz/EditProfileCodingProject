@@ -12,6 +12,9 @@
     <string name="upload_a_photo_of_yourself">Upload a photo of yourself:</string>
     <string name="what_s_your_email">What\'s your email?</string>
     <string name="what_type_of_passenger_are_you">What type of passenger are you?</string>
+    <string name="you_email_address">Your email address</string>
+    <string name="your_phone_number">Your phone number</string>
+    <string name="hint_text">Write a little bit about yourself. Do you like chatting? Are you a smoker? Do you bring pets?</string>
 
     <string-array name="textual_profile_information">
         <item>Name</item>

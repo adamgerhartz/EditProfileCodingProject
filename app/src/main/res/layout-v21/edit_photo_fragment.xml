@@ -23,6 +23,23 @@
             android:textColor="@color/black"
             android:textSize="26sp"
             android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:layout_weight="1"
+            android:outlineAmbientShadowColor="@color/offwhite"
+            android:outlineSpotShadowColor="@color/offwhite"
+            android:outlineProvider="none"
+            android:background="@android:color/transparent"
+            tools:targetApi="p">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/offwhite"/>
+
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
 
