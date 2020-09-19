@@ -22,7 +22,8 @@
             android:backgroundTint="@color/black"
             android:stateListAnimator="@null"
             android:fadingEdgeLength="5dp"
-            android:translationZ="2dp"/>
+            android:translationZ="2dp"
+            android:padding="5dp"/>
 
     </TableRow>
 

@@ -16,6 +16,7 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:homeAsUpIndicator">@drawable/back_button_image</item>
+        <item name="android:colorEdgeEffect">@color/dividergrey</item>
     </style>
 
 </resources>

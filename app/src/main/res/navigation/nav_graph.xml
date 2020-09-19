@@ -12,23 +12,48 @@
 
         <action
             android:id="@+id/action_mainFragment_to_editNameFragment"
-            app:destination="@id/editNameFragment" />
+            app:destination="@id/editNameFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+        />
 
         <action
             android:id="@+id/action_mainFragment_to_editPhotoFragment"
-            app:destination="@id/editPhotoFragment" />
+            app:destination="@id/editPhotoFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+        />
 
         <action
             android:id="@+id/action_mainFragment_to_editPhoneNumberFragment"
-            app:destination="@id/editPhoneNumberFragment" />
+            app:destination="@id/editPhoneNumberFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+        />
 
         <action
             android:id="@+id/action_mainFragment_to_editEmailAddressFragment"
-            app:destination="@id/editEmailAddressFragment" />
+            app:destination="@id/editEmailAddressFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+        />
 
         <action
             android:id="@+id/action_mainFragment_to_editAboutMeFragment"
-            app:destination="@id/editAboutMeFragment" />
+            app:destination="@id/editAboutMeFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+        />
 
     </fragment>
 
@@ -36,30 +61,62 @@
         android:id="@+id/editNameFragment"
         android:name="com.example.editprofilecodingproject.ui.main.view.fragment.EditNameFragment"
         android:label="edit_name_fragment"
-        tools:layout="@layout/edit_name_fragment" />
+        tools:layout="@layout/edit_name_fragment">
+
+        <argument
+            android:name="recipient1"
+            android:defaultValue="None" />
+
+        <argument
+            android:name="recipient2"
+            android:defaultValue="None" />
+
+    </fragment>
+
 
     <fragment
         android:id="@+id/editPhotoFragment"
         android:name="com.example.editprofilecodingproject.ui.main.view.fragment.EditPhotoFragment"
         android:label="edit_photo_fragment"
-        tools:layout="@layout/edit_photo_fragment" />
+        tools:layout="@layout/edit_photo_fragment">
+
+        <argument
+            android:name="recipient"
+            android:defaultValue="None" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/editPhoneNumberFragment"
         android:name="com.example.editprofilecodingproject.ui.main.view.fragment.EditPhoneNumberFragment"
         android:label="edit_phone_number_fragment"
-        tools:layout="@layout/edit_phone_number_fragment" />
+        tools:layout="@layout/edit_phone_number_fragment">
+
+        <argument
+            android:name="recipient"
+            android:defaultValue="None" />
+    </fragment>
 
     <fragment
         android:id="@+id/editEmailAddressFragment"
         android:name="com.example.editprofilecodingproject.ui.main.view.fragment.EditEmailAddressFragment"
         android:label="edit_email_address_fragment"
-        tools:layout="@layout/edit_email_address_fragment" />
+        tools:layout="@layout/edit_email_address_fragment">
+
+        <argument
+            android:name="recipient"
+            android:defaultValue="None" />
+    </fragment>
 
     <fragment
         android:id="@+id/editAboutMeFragment"
         android:name="com.example.editprofilecodingproject.ui.main.view.fragment.EditAboutMeFragment"
         android:label="edit_about_me_fragment"
-        tools:layout="@layout/edit_about_me_fragment" />
+        tools:layout="@layout/edit_about_me_fragment">
+
+        <argument
+            android:name="recipient"
+            android:defaultValue="None" />
+    </fragment>
 
 </navigation>

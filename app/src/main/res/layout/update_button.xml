@@ -11,7 +11,7 @@
         android:layout_marginTop="15dp" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/update_button"
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="16dp"
             android:layout_width="match_parent"
@@ -20,7 +20,10 @@
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:backgroundTint="@color/black"
-            android:elevation="5dp"/>
+            android:stateListAnimator="@null"
+            android:fadingEdgeLength="5dp"
+            android:translationZ="2dp"
+            android:padding="5dp"/>
 
     </TableRow>
 

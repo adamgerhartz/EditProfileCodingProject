@@ -4,6 +4,10 @@
     <string name="name">Name</string>
     <string name="name_value">Adam Gerhartz</string>
     <string name="update">Update</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="whats_your_name">What\'s your name?</string>
 
     <string-array name="textual_profile_information">
         <item>Name</item>

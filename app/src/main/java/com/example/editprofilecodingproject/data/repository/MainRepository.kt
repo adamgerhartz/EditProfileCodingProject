@@ -1,15 +1,13 @@
 package com.example.editprofilecodingproject.data.repository
 
+import android.util.Log
 import com.example.editprofilecodingproject.data.api.ApiHelper
-import com.example.editprofilecodingproject.data.model.ProfileInfo
+import com.example.editprofilecodingproject.data.db.entity.User
 import io.reactivex.Single
 
 class MainRepository(private val apiHelper: ApiHelper) {
 
-    fun getProfileData(): Single<List<ProfileInfo>> {
-
+    fun getUserData(): Single<User> {
         return apiHelper.getProfileData()
-
     }
-
 }

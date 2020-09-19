@@ -1,10 +1,10 @@
 package com.example.editprofilecodingproject.data.api
 
-import com.example.editprofilecodingproject.data.model.ProfileInfo
+import com.example.editprofilecodingproject.data.db.entity.User
 import io.reactivex.Single
 
 interface ApiService {
 
-    fun getProfileData(): Single<List<ProfileInfo>>
+    fun getProfileData(): Single<User>
 
 }

@@ -5,7 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.view.fragment.EditPhotoFragment">
 
-    <include layout="@layout/custom_toolbar">
+    <include
+        layout="@layout/custom_toolbar"
+        android:id="@+id/toolbar">
+
+    </include>
+
+    <include layout="@layout/update_button">
 
     </include>
 
